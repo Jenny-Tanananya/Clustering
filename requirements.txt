@@ -1,4 +1,4 @@
 streamlit
 matplotlib
-sklearn
+scikit-learn
 pickle
