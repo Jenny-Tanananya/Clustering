@@ -25,12 +25,6 @@ scatter = ax.scatter(X[:, 0], X[:, 1], c=y_kmeans, cmap='viridis')
 # Plot centroids as big red circles
 centroids = loaded_model.cluster_centers_
 ax.scatter(centroids[:, 0], centroids[:, 1], s=300, c='red', label='Centroids')  # marker is 'o' by default
-
-# Optional: add boundary circles
-for center in centroids:
-    circle = Circle(center, radius=0.6, color='gray', alpha=0.2, linestyle='--', linewidth=2, fill=True)
-    ax.add_patch(circle)
-
 ax.set_title('k-Means Clustering')
 ax.legend()
 st.pyplot(fig)
